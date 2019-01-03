@@ -36,8 +36,6 @@ int main(int argc, char **argv)
 
 	// check if this is a directed graph
 	file >> mode;
-	if(mode == 1) directed = true;
-	else directed = false;
 
 	// get the number of nodes
 	file >> node_count;
@@ -51,12 +49,6 @@ int main(int argc, char **argv)
 		file >> destination;
 		file >> weight;
 		g->set_edge(source, destination, weight);
-		// if this is an undirected graph we need to insert the reverse edge
-		// into the graph
-		if(!directed)
-		{
-			g->set_edge(destination, source, weight);
-		}
 	}
 	file.close();
 
