@@ -33,6 +33,12 @@ int main()
         exit(points);
     }
 
+    if(ret_data->size() != 7)
+    {
+        cout << "[-->] the vector returned from the function is not the right size\n";
+        exit(points);
+    }
+
     points+=2;
 
     i = 0;
