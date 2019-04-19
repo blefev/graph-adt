@@ -1,11 +1,14 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
+#include <utility>
 #include <cstddef>
+#include <climits>
 #include <iostream>
 #include <iomanip>
 #include <stack>
 #include <queue>
+#include <set>
 #include <vector>
 using namespace std;
 
@@ -20,6 +23,7 @@ public:
 	void set_edge(int src, int dst, int w);
 	// Print the graph's data
 	void print_data(void);
+	bool empty(vector<bool>);
 	// Perform a dfs from the provided start node. Returns a vector containing
 	// the search results
 	vector<int> *dfs(int start);
